@@ -1,10 +1,12 @@
 gsap.registerPlugin(ScrollTrigger)
 
 document.addEventListener("DOMContentLoaded", function () {
-    const footer = document.querySelector(".footer");
     const pinnedSections = gsap.utils.toArray(".card");
     // const lastCard = document.querySelector(".card.scroll");
     const lastCard = pinnedSections.pop();
+    // const footer = document.querySelector(".footer");
+    const footer = lastCard.nextElementSibling;
+    // console.log("card", pinnedSections.pop().nextElementSibling);  
     
 
     pinnedSections.forEach((section, index, sections) => {
